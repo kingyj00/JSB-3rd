@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MainController {
 
-    @GetMapping("/")
+    @GetMapping("/start")
     @ResponseBody
     public String index() {
         return "스프링부트 게시판 만들기 프로젝트 시작.";
