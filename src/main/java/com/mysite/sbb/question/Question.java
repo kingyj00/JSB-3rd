@@ -2,6 +2,8 @@ package com.mysite.sbb.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
+import jakarta.persistence.ManyToMany;
 
 import com.mysite.sbb.answer.Answer;
 import jakarta.persistence.Column;
@@ -15,6 +17,7 @@ import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.ManyToOne;
 import com.mysite.sbb.user.SiteUser;
+
 
 @Getter
 @Setter
@@ -39,4 +42,7 @@ public class Question {
     private SiteUser author;
 
     private LocalDateTime modifyDate;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }
